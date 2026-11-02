@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas de Películas</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+
+                <div class="login">
+                    <h1>🎬 Movie Reviews</h1>
+                    <h3>Iniciar sesión</h3>
+
+                    <input type="text" id="usuario" class="form-control mb-3" placeholder="Nombre de usuario">
+
+                    <input type="password" id="clave" class="form-control mb-3" placeholder="Contraseña">
+
+                    <button class="btn btn-danger w-100" onclick="ingresar()">Ingresar</button>
+
+                    <p id="mensaje"></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ingresar() {
+            let usuario = document.getElementById("usuario").value;
+            let clave = document.getElementById("clave").value;
+
+            if (usuario != "" && clave != "") {
+                localStorage.setItem("usuario", usuario);
+                window.location.href = "peliculas.html";
+            } else {
+                document.getElementById("mensaje").textContent = "Completá todos los campos";
+            }
+        }
+    </script>
+
+</body>
+</html>
