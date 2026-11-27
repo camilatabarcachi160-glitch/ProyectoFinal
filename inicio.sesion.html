@@ -11,7 +11,7 @@
     <div class="container">
     <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-md-5">
-                
+
                 <div class="login">
                     <h1 class="fw-bold mb-4">Reseñas de Películas</h1>
                     <h3 class="mb-4">Iniciar sesión</h3>
@@ -33,11 +33,11 @@
             let usuario = document.getElementById("usuario").value;
             let clave = document.getElementById("clave").value;
 
-            if (usuario != "" && clave != "") {
+            if (usuario == localStorage.getItem("usuarioRegistrado") && clave != "") {
                 localStorage.setItem("usuario", usuario);
                 window.location.href = "principal.html";
             } else {
-                document.getElementById("mensaje").textContent = "Completá todos los campos";
+                document.getElementById("mensaje").textContent = "Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.";
             }
         }
     </script>
