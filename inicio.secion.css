@@ -3,3 +3,10 @@ body {
     background-size: cover;
     background-position: center;
 }
+.login {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
